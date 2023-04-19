@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Enter data for skiing resort:</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.Label("Resort Name:")</td>
+            <td>@Html.TextBox("name")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Resort Location:")</td>
+            <td>@Html.TextBox("location")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Resort Type:")</td>
+            <td>@Html.DropDownList("type", new SelectList(new[] { "Ski", "Snowboard", "Ski and Snowboard" }))</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Resort Elevation (ft):")</td>
+            <td>@Html.TextBox("elevation", null, new { type = "number" })</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Resort Length (mi):")</td>
+            <td>@Html.TextBox("length", null, new { type = "number" })</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Resort Open:")</td>
+            <td>@Html.CheckBox("open")</td>
+        </tr>
+    </table>
+
+    <br />
+    <input type="submit" value="Submit" />
+}
+

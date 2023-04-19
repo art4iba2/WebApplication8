@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Entered data:</h2>
+
+<p>Name: @ViewBag.Name</p>
+<p>Location: @ViewBag.Location</p>
+<p>Type: @ViewBag.Type</p>
+<p>Elevation: @ViewBag.Elevation</p>
+<p>Length: @ViewBag.Length</p>
+<p>Open: @ViewBag.Open</p>
+
+@Html.ActionLink("Enter new data", "Index")
